@@ -1,0 +1,186 @@
+@font-face {
+
+    font-family: BoschSans;
+    src: url('./assets/fonts/BoschSans-Light.eot');
+    src: url('./assets/fonts/BoschSans-Light.ttf');
+    src: url('./assets/fonts/BoschSans-Light.woff');
+    src: url('./assets/fonts/BoschSans-Light.woff2');
+}
+
+@font-face {
+    font-family: BoschIcon;
+    src: url('./assets/fonts/Bosch-Icon.eot') format('eot');
+    src: url('./assets/fonts/Bosch-Icon.otf') format('otf'),
+    url('./assets/fonts/Bosch-Icon.ttf') format('ttf'),
+    url('./assets/fonts/Bosch-Icon.woff') format('woff'),
+    url('./assets/fonts/Bosch-Icon.woff2') format('woff2');
+}
+
+body {
+    background-image: linear-gradient(to right, #50237F, #005691);
+    margin: 0;
+    font-family: 'BoschSans';
+}
+
+i { 
+    font-family: 'BoschIcon';
+    font-style: inherit;
+    font-size: 1.5rem;
+}
+
+/* HEADER */
+header {
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+header img {
+    width: 250px;
+}
+
+.bosch-brand {
+    background-color: #fff;
+    height: 2vh;
+}
+.bosch-brand img { 
+    width: 8%;
+    position: absolute;
+    right: 10%;
+}
+
+/* MAIN CONTAINER */
+
+main {
+    padding: 0 2rem;
+}
+
+/* SENSORS DATA SECTION */
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 1rem;
+    background-color: rgba(255,255,255, 0.02);
+    padding: 0.4rem 1rem;
+}
+
+span.data-name {
+    margin-left: 2.4rem;
+    font-size: 0.9rem;
+    color: #c2c2c2;
+}
+
+span.data-info {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+
+.yaw-icon {
+    width: 10%;
+    display: inline-flex;
+    transform: rotate(90deg);
+}
+
+.bg-data {
+    width: 20%;
+    height: 80vh;
+    float: left;
+    color: #fff;
+}
+
+/* VIDEO SECTION */
+
+video#webcam {
+    border: 1px solid;
+}
+
+
+/* INTERACTION SECTION */
+
+section.interaction {
+    text-align: center;
+}
+
+.bg-interaction {
+    width: 60%;
+    height: 80vh;
+    float: left;
+}
+
+.main-action .direction button {
+    width: 100%;
+    background-color: rgba(255,255,255, 0.1);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.main-action button:hover {
+    opacity: 0.7;
+}
+
+.train p { 
+    text-align: center;
+    color: #8edcff;
+} 
+
+.direction {
+    margin-top: 1rem;
+}
+
+.train button {
+    width: 49%;
+    cursor: pointer;
+    padding: 0.5rem;
+    background: none;
+    border: 1px solid #8edcff;
+    color: #8edcff;
+}
+
+button#btn-predict {
+    width: 100%;
+    background-color: transparent;
+    border: white 1px solid;
+    color: white;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+section.controls {
+    width: 20%;
+    float: left;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+#class-back svg {
+    transform: rotate(180deg);
+}
+
+#class-forward svg {
+}
+
+#class-down svg {
+    transform: rotate(180deg);
+}
+
+#class-left svg {
+    transform: rotate(-90deg);
+}
+
+#class-right svg {
+    transform: rotate(90deg);
+}
+
+button#class-right, button#class-left {
+    width: 49%;
+    height: 80px;
+}
+
+.train button.btn-save-model {
+    width: 60%;
+    margin: 1rem 20%;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "transfer-learning-models",
+  "version": "1.0.0",
+  "description": "Gestures control drone",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm start",
+    "start": "parcel index.html",
+    "build": "parcel build index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/innovationmexico/tl-dron-workshop/transfer-learning-models.git"
+  },
+  "keywords": [
+    "Drone",
+    "AI",
+    "JS"
+  ],
+  "author": "Antares Valle, Douglas Torres, Brandon Escamilla",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow-models/knn-classifier": "^1.0.0",
+    "@tensorflow-models/mobilenet": "^1.0.0",
+    "@tensorflow/tfjs": "^1.0.1",
+    "@tensorflow/tfjs-node": "^1.0.2",
+    "babel-polyfill": "^6.26.0",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "fs-": "^1.0.0",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.2"
+  }
+}

@@ -1,0 +1,153 @@
+<!-- The following code was made following the instructions from  -->
+<!-- Google's Tensorflow.js Transfer Learning Image Classifier -->
+<!-- Tutorial's link: https://codelabs.developers.google.com/codelabs/tensorflowjs-teachablemachine-codelab/index.html?index=..%2F..index#0 -->
+
+<!-- The idea is to modify certain functionalities to adapt the code to the proposed use case and experiment with Tensorflow.js' advantages. -->
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="./style.css" >
+          <!-- Load the latest version of TensorFlow.js -->
+        <!-- <script src="https://unpkg.com/@tensorflow/tfjs"></script> -->
+          <!--<script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>-->
+        <!--  <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>-->
+  </head>
+  <body>
+    <!-- <div id="console"></div> -->
+    <div class="bosch-brand">
+        <img src="./assets/img/Bosch_TOP_LV_RGB.png">
+    </div>
+    <header>
+      <img src="./assets/img/logo-drone-gesture.png">
+    </header>
+    <main>
+      <section class="data">
+        <div class="bg-data">
+            <ul>
+                <li>
+                  <div>
+                    <i></i>
+                    <span type="hidden" class="data-info" id="pitch" value=""/>
+                  </div>
+                  <span class="data-name">Pitch</span>
+                </li>
+                <li>
+                  <div>
+                    <i></i>
+                    <span type="hidden" class="data-info" id="roll" value=""/>
+                  </div>
+                  <span class="data-name">Roll</span>
+                </li>
+                <li>
+                  <div>
+                    <div class="yaw-icon"><i></i></div>
+                    <span type="hidden" class="data-info" id="yaw" value=""/>
+                  </div>
+                  <span class="data-name">Yaw</span>
+                </li>
+                <li>
+                  <div>
+                    <i></i>
+                    <span type="hidden" class="data-info" id="tof" value=""/>
+                  </div>
+                  <span class="data-name">TOF</span>
+                </li>
+                <li>
+                  <div>
+                    <i></i>
+                    <span type="hidden" class="data-info" id="height" value=""/>
+                  </div>
+                  <span class="data-name">Height</span>
+                </li>
+                <li>
+                  <div>
+                    <i></i>
+                    <span type="hidden" class="data-info" id="battery" value=""/>
+                  </div>
+                  <span class="data-name">Battery</span>
+                </li>
+                <li>
+                  <div>
+                    <i></i>
+                    <span type="hidden" class="data-info" id="barometer" value=""/>
+                  </div>
+                  <span class="data-name">Barometer</span>
+                </li>
+                <li>
+                  <div>
+                      <i></i>
+                      <span type="hidden" class="data-info" id="time" value=""/>
+                  </div>
+                  <span class="data-name">Time</span>
+                </li>
+              </ul>
+        </div>
+        
+      </section>
+      <section class="interaction">
+          <div class="bg-interaction">
+              <video autoplay playsinline muted id="webcam" width="800" height="600"></video>
+          </div>
+      </section>
+      <section class="controls">
+          <div class="main-action">
+              <button id="btn-predict">Predict</button>
+              <h1><div id="console"></div></h1>
+              <div class="train">
+                <p>For training</p>
+                <div>
+                    <button id="class-land">Land</button>
+                    
+                    <button id="class-forward">
+                      <svg height="60" width="80">
+                        <path d="M40 0 L0 70 L80 70 Z" style="fill:#008ecf"/>
+                      </svg>
+                    </button>
+
+                    <button id="class-takeOff">Take off</button>
+                    <button id="class-back">
+                      <svg height="60" width="80">
+                        <path d="M40 0 L0 70 L80 70 Z" style="fill:#008ecf"/>
+                      </svg>
+                    </button>
+                  
+                    <div class="direction">
+                      <button id="class-up">
+                        <svg height="60" width="80">
+                          <path d="M40 0 L0 70 L80 70 Z" style="fill:#008ecf"/>
+                        </svg>
+                      </button>
+                      <button id="class-left">
+                          <svg height="60" width="80">
+                            <path d="M40 0 L0 70 L80 70 Z" style="fill:#008ecf"/>
+                          </svg>
+                      </button>
+                      <button id="class-right">
+                          <svg height="60" width="80">
+                            <path d="M40 0 L0 70 L80 70 Z" style="fill:#008ecf"/>
+                          </svg>
+                      </button>
+                      <button id="class-down">
+                          <svg height="60" width="80">
+                            <path d="M40 0 L0 70 L80 70 Z" style="fill:#008ecf"/>
+                          </svg>
+                      </button>
+                    </div>
+                </div>
+                <button id="btn-save-model">Save model</button>
+                <button id="stop">Stop</button>
+                <button id="class-standBy">Stand By</button>
+                <div id="num-examples"></div>
+              </div>
+          </div>
+      </section>
+    </main>   
+
+    </div>
+    <!-- Add an image that we will use to test -->
+    
+    <p></p>
+    <!-- <button id="sendSocketCommand">Send socket Command</button> -->
+    <!-- Load index.js and client's socket after the content of the page -->
+    <script src="index.js"></script>
+  </body>
+</html>
